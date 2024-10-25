@@ -1,7 +1,8 @@
 const express=require("express");
 const app=express();
 const port=8080;
-const path=require("path"); 
+const path=require("path");
+const mongoose=require("mo") 
 
 app.set("view engine","ejs");                                    // When The Response Is 'Rendered' default path to access.
 app.set("views",path.join(__dirname,"/views"));               
