@@ -21,7 +21,7 @@ async function main() {
 app.set("view engine","ejs");                                    // When The Response Is 'Rendered' default path to access.
 app.set("views",path.join(__dirname,"/views"));
 app.use(express.urlencoded({extended:true}));
-app.use(express.static('public')); // Serve files from the 'public' folder
+app.use(express.static('public'));                             // Serve files from the 'public' folder
 
 app.listen(port,(req,res)=>{
     console.log("Server Started..");
