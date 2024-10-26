@@ -19,8 +19,7 @@ async function main() {
 }
 
 app.set("view engine","ejs");                                    // When The Response Is 'Rendered' default path to access.
-app.set("views",path.join(__dirname,"/views"));               
-app.use(express.static(path.join(__dirname,"/public")));         // Default middleware : for default paths.
+app.set("views",path.join(__dirname,"/views"));
 app.use(express.urlencoded({extended:true}));    
 
 app.listen(port,(req,res)=>{
