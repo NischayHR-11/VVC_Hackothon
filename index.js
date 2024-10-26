@@ -2,7 +2,21 @@ const express=require("express");
 const app=express();
 const port=8080;
 const path=require("path");
-const mongoose=require("mo") 
+const mongoose=require("mongoose");
+const data=require("./Modle/data")
+
+main().then((res)=>{
+
+    console.log("database connected.....");
+}).catch((err)=>{
+
+    console.error(err);
+});
+
+async function main() {
+    
+    await mongoose.connect("mongodb://127.0.0.1:27017/hacko");
+}
 
 app.set("view engine","ejs");                                    // When The Response Is 'Rendered' default path to access.
 app.set("views",path.join(__dirname,"/views"));               
